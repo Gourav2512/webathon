@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+*{
+    margin:0;
+    padding:0;
+    
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+body{
+    background: #f2f2f2;
+}
+nav{
+    background: whitesmoke;
+    box-shadow:#1b1b1b;
+
+}
+nav:after{
+    content:'';
+    clear:both;
+    display: table;
+}
+nav img{
+    display:inline-block;
+    margin-left:60px;
+}    
+nav ul{
+    float:right;
+    list-style: none;
+    margin-right:40px;
+    position:relative;
+    top:20px;
+}
+nav ul li{
+    
+    display:inline-block;
+    
+    margin:0 5px;
+    text-align:left;
+}
+nav ul li a{
+    color:black;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding:8px 15px;
+
+}
+
+
+nav ul li a:hover,.active{
+    color:black;
+    border-radius:5px;
+    box-shadow:0 0 5px #191a1a,
+               0 0 5px #353636;
+
+}
+nav ul ul li a:hover{
+    color:orangered;
+    box-shadow:none;
+}
+nav ul ul{
+    position: absolute;
+    top:90px;
+    border-top: 3px solid #1b1b1b;
+    opacity:0;
+    visibility: hidden;
+    transition: top .3s;
+    z-index: 1;
+    
+}
+nav ul ul ul{
+    border-top:none;
+    visibility: hidden;
+    opacity:0;
+}
+nav ul li:hover > ul{
+    top:65px;
+    opacity:1;
+    visibility:visible;
+
+}
+nav ul ul li{
+    position: relative;
+    margin:0px;
+    width:150px;
+    float:none;
+    display:list-item;
+    border-bottom:1px solid rgba(0,0,0,0.3);
+    background: whitesmoke;
+    box-shadow: rgba(0,0,0,0.3);
+    
+
+}
+nav ul ul li a{
+    line-height: 17px;
+    font-size:15px;
+    font-weight: 300;
+    display:block;
+    
+}
+nav ul ul ul li{
+    position: relative;
+    top:-70px;
+    left:150px;
+
+}
+
+.show,.icon,input{
+    display: none;
+
+}
+.image{
+    width:1000px;
+}
+
+h2{
+    margin-left: 20px;
+    margin-top: 40px;
+    
+    color:#1b1b1b;
+    border-bottom: 1px dotted #a3a3a3;
+}
+p{
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top:30px;
+    margin-bottom: 30px;
+    color:#353636;
+}
+footer{
+    background: #1b1b1b;
+    width:100%;
+    height:60px;
+    
+}
+.copy{
+    display:inline-block;
+    padding-left:40px;
+    color:white;
+    line-height: 60px;
+}
+.social{
+    color:white;
+    right:40px;
+    display:inline-block;
+    position:absolute;
+    line-height: 60px;
+    
+}
+
+.fab{
+    color:white;
+    text-decoration: none;
+    padding:0 5px 0 5px;
+}
+@media all and (max-width: 968px) {
+    nav ul{
+        margin-right: 0px;
+        float:left;
+
+    }
+    nav .logo{
+        padding-left: 30px;
+        width:100%;
+
+    }
+    nav ul li, nav ul ul li{
+        display: block;
+        width:100%;
+        
+    }
+    nav ul ul{
+        top:70px;
+        position: static;
+        border-top: none;
+        float:none;
+        display:none;
+        opacity:1;
+        visibility: visible;
+    }
+    nav ul ul ul li{
+        position:static;
+
+    }
+    .show{
+        display:block;
+        color:black;
+        font-size:18px;
+        padding:0 20px;
+        line-height: 70px;
+        cursor:pointer;
+    }
+    .show:hover{
+        color:orangered;
+    }
+    .icon{
+        display:inline-block;
+        color: black;
+        position: absolute;
+        right:40px;
+        line-height: 70px;
+        font-size:25px;
+        cursor:pointer;
+        padding:10px;
+
+    }
+    nav ul li a:hover{
+        box-shadow:none;
+
+    }
+    .show + a, ul{
+        display:none;
+    }
+    [id^=btn]:checked + ul{
+        display:block;
+    }
+   
+    
+    
+}
